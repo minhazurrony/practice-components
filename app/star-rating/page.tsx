@@ -9,7 +9,11 @@ export default function StarRating() {
   const [hoveredRating, setHoveredRating] = useState(0);
 
   const handleRatingClick = (star: number) => {
-    setRating(star);
+    if (star === rating) {
+      setRating(star - 1);
+    } else {
+      setRating(star);
+    }
     setHoveredRating(0);
   };
 
