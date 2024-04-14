@@ -38,9 +38,8 @@ export default function StarRating() {
       );
     } else {
       return (
-        <Tooltip content={tooltipMessages[idx]}>
+        <Tooltip key={star} content={tooltipMessages[idx]}>
           <MdOutlineStarBorder
-            key={star}
             onClick={() => handleRatingClick(star)}
             onMouseEnter={() => setHoveredRating(star)}
             onMouseLeave={() => setHoveredRating(0)}
