@@ -8,17 +8,17 @@ import { routes } from "../constants/routes";
 export const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <nav className="text-center">
+    <nav className="flex flex-col text-center">
       {routes.map((route) => {
         return (
           <Link
             key={route.path}
             href={route.path}
-            className={
+            className={`capitalize ${
               route.path === pathname
                 ? "text-slate-950 underline"
                 : "text-slate-500 hover:text-slate-950 hover:underline"
-            }
+            }`}
           >
             {route.title}
           </Link>

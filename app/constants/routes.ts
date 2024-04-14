@@ -1,6 +1,10 @@
 export const routes = [
   {
-    title: "Star Rating",
+    title: "star rating",
     path: "/star-rating",
+  },
+  {
+    title: "pop over",
+    path: "/pop-over",
   },
 ];
